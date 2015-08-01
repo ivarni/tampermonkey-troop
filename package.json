@@ -1,0 +1,14 @@
+{
+  "name": "tampermonkey-troop",
+  "version": "0.0.1",
+  "description": "Tampermonkey scripts",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ivarni/tampermonkey-troop.git"
+  },
+  "author": "Ivar Nilsen",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/ivarni/tampermonkey-troop/issues"
+  }
+}
