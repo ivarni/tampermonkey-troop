@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Hello world
-// @version      0.1
+// @version      0.2
 // @match        *://localhost:*/*
 // @grant        none
 // @downloadUrl  https://github.com/ivarni/tampermonkey-troop/raw/master/troll-script/trollScript.user.js
@@ -16,13 +16,12 @@
     imageWrapper.style.height = '100%';
     imageWrapper.style.zIndex = '9001'; //OVER 9000
     imageWrapper.style.position = 'fixed';
-    imageWrapper.style.top = '0';
+    imageWrapper.style.top = '30%';
     imageWrapper.style.left = '0';
 
     var image = document.createElement('img');
     image.setAttribute('src', imageSrcFirst);
     image.style.width = '100%';
-    image.style.height = '100%';
 
     hide();
     imageWrapper.appendChild(image);
