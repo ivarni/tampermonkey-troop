@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VG: no videos
-// @description  Links to videos are annoying and stupid and not always obvious
-// @version      0.1
+// @description  I dont care for surprise-video-playbacks at work
+// @version      0.2
 // @match        *://www.vg.no/*
 // @grant        none
 // @downloadUrl  https://github.com/ivarni/tampermonkey-troop/raw/master/vg-novideos/vgNovideos.user.js
@@ -15,6 +15,23 @@
 
     links.forEach(function(link) {
         link.style.textDecoration = 'line-through';
+        removeElement(findArticle(link));
     });
-
+       
+    function findArticle(el) {
+        var parent = el.parentNode;
+        while (parent && parent !== document) {
+            if (parent.classList.contains('article-extract')) {
+                return parent;
+            }
+            parent = parent.parentNode;
+        }
+    }
+    
+    function removeElement(el) {
+        if (el && el.parentNode) {
+            el.parentNode.removeChild(el);
+        }
+    }
+    
 }());
