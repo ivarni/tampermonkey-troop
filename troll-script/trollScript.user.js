@@ -70,7 +70,7 @@
     //make sure images are cached in browser
     swap();
     setTimeout(swap, 5000);
-show()
+
     setInterval(function() {
 
         setTimeout(show, 1000);
