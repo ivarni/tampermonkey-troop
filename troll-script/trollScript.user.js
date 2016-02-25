@@ -12,13 +12,16 @@
     var imageSrcSecond = 'https://github.com/ivarni/tampermonkey-troop/raw/master/troll-script/twins2.png';
 
     var imageWrapper = document.createElement('div');
-    imageWrapper.style.width = '100%';
-    imageWrapper.style.height = '100%';
+    imageWrapper.style.width = '768px';
+    imageWrapper.style.height = '576px;';
     imageWrapper.style.zIndex = '9001'; //OVER 9000
-    imageWrapper.style.position = 'fixed';
-    imageWrapper.style.top = '30%';
-    imageWrapper.style.left = '0';
+    imageWrapper.style.position = 'absolute';
+    imageWrapper.style.left = '50%';
+    imageWrapper.style.top = '50%';
+    imageWrapper.style.marginLeft = '-364px';
+    imageWrapper.style.marginTop = '-288px';
 
+    
     var image = document.createElement('img');
     image.setAttribute('src', imageSrcFirst);
     image.style.width = '100%';
@@ -67,7 +70,7 @@
     //make sure images are cached in browser
     swap();
     setTimeout(swap, 5000);
-
+show()
     setInterval(function() {
 
         setTimeout(show, 1000);
